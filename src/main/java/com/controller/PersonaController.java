@@ -41,6 +41,11 @@ public class PersonaController {
         model.addAttribute("paises", listaPaises);
         return "crear";
     }
+    @GetMapping("/delete/{id}")
+    public String eliminarPersona(@PathVariable("id")Long idPersona){
+     personaService.delete(idPersona);
+     return "redirect:/persona";
+    }
     @PostMapping("/save")
     public String guardarPersona(@ModelAttribute Persona persona){
         personaService.savePersona(persona);
