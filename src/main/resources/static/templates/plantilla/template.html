@@ -58,6 +58,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <div class="me-5 d-none d-lg-block">
                     <span>Get connected with us on social networks:</span>
                 </div>
+                <div>
+                    <p> Copyright Tienda; 2022
+                    </p>
+                    
+                    <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                    th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES</a>
+                    <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                    th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}">EN</a>
+                    
+                </div>
                 <!-- Left -->
 
                 <!-- Right -->
